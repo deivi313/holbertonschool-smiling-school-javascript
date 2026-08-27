@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="font-style.css" />
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <header class="header courses-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-dark pt-4 px-0">
+        <a class="navbar-brand" href="homepage.html">SmileSchool</a>
+      </nav>
+
+      <section class="hero text-center text-white">
+        <h1>Courses</h1>
+      </section>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SEARCH SECTION -->
+    <section class="section search">
+      <div class="container">
+        <div class="row py-4">
+
+          <!-- SEARCH -->
+          <div class="col-lg-4">
+            <span class="text-white font-weight-bold">KEYWORDS</span>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">🔍</span>
+              </div>
+              <input type="text" id="course-search" class="form-control" placeholder="Search by keywords" />
+            </div>
+          </div>
+
+          <!-- TOPIC -->
+          <div class="col-lg-4">
+            <span class="text-white font-weight-bold">TOPIC</span>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle" id="topic-label" data-toggle="dropdown">
+                All
+              </a>
+              <div class="dropdown-menu" id="topic-dropdown-menu"></div>
+            </div>
+          </div>
+
+          <!-- SORT -->
+          <div class="col-lg-4">
+            <span class="text-white font-weight-bold">SORT BY</span>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle" id="sort-label" data-toggle="dropdown">
+                Most Popular
+              </a>
+              <div class="dropdown-menu" id="sort-dropdown-menu"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="section results">
+      <div class="container">
+
+        <div class="section-title">
+          <span class="text-muted video-count">0 videos</span>
+        </div>
+
+        <!-- LOADER -->
+        <div class="loader text-center" style="display:none;">
+          Loading...
+        </div>
+
+        <!-- DYNAMIC COURSES -->
+        <div class="row" id="courses-results"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- IMPORTANT: LINK YOUR JS -->
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
